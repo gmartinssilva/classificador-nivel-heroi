@@ -1,23 +1,35 @@
 let nomeHeroi = "Guts"
-let quantidadeExperiencie = 4000
+let quantidadeExperiencie = 5500
 let nivelHeroi = "Sem Nível"
 
-if(quantidadeExperiencie < 1000){
-    nivelHeroi = "Ferro"
-} else if(quantidadeExperiencie < 2000){
-        nivelHeroi = "Bronze"
-} else if(quantidadeExperiencie < 5000){
-    nivelHeroi = "Prata"
-} else if(quantidadeExperiencie < 7000){
-    nivelHeroi = "Ouro"
-} else if(quantidadeExperiencie < 8000){
-    nivelHeroi = "Platina"
-} else if(quantidadeExperiencie < 9000){
-    nivelHeroi = "Ascendnete"
-} else if(quantidadeExperiencie < 10000){
-    nivelHeroi = "Imortal"
+const CLASSE_HEROI = [
+    [1000, "Ferro"],
+    [2000, "Bronze"],
+    [5000, "Prata"],
+    [7000, "Ouro"],
+    [8000, "Platina"],
+    [9000, "Ascendente"],
+    [10000, "Imortal"],
+]
+
+const CLASSE_MAXIMA_HEROI = "Radiante"
+
+if(quantidadeExperiencie < CLASSE_HEROI[0][0]){
+    nivelHeroi = CLASSE_HEROI[0][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[1][0]){
+    nivelHeroi = CLASSE_HEROI[1][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[2][0]){
+    nivelHeroi = CLASSE_HEROI[2][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[3][0]){
+    nivelHeroi = CLASSE_HEROI[3][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[4][0]){
+    nivelHeroi = CLASSE_HEROI[4][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[5][0]){
+    nivelHeroi = CLASSE_HEROI[5][1]
+} else if(quantidadeExperiencie < CLASSE_HEROI[6][0]){
+    nivelHeroi = CLASSE_HEROI[6][1]
 } else {
-    nivelHeroi = "Radiante"
+    nivelHeroi = CLASSE_MAXIMA_HEROI
 }
 
 console.log("O Heroi de nome:", nomeHeroi, "está no nível de:", nivelHeroi)
